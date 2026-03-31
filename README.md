@@ -27,5 +27,34 @@
 
 ### 1. 克隆项目
 ```bash
-git clone [https://github.com/你的用户名/你的仓库名.git](https://github.com/你的用户名/你的仓库名.git)
-cd 你的仓库名
+git clone [https://github.com/wlt205287-hub/local-pdf-rag-agent-.git](https://github.com/wlt205287-hub/local-pdf-rag-agent-.git)
+cd local-pdf-rag-agent-
+```
+
+### 2. 配置虚拟环境
+```bash
+python -m venv venv
+
+# Windows 激活环境:
+.\venv\Scripts\activate
+
+# Mac/Linux 激活环境:
+source venv/bin/activate
+```
+
+### 3. 安装依赖
+```bash
+pip install -r requirements.txt -i [https://mirrors.aliyun.com/pypi/simple/](https://mirrors.aliyun.com/pypi/simple/)
+```
+
+### 4. 启动应用
+```bash
+streamlit run app.py
+```
+
+## 🎯 使用指南
+
+1. 启动网页后，在左侧侧边栏输入你的 DeepSeek API Key。
+2. 上传你需要阅读的 PDF 文档。
+3. 等待系统完成自动分词与 BM25 索引构建。
+4. 在底部聊天框向 AI 提问关于 PDF 内容的任何细节。
